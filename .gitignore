@@ -132,3 +132,5 @@ dmypy.json
 # Added by cargo
 
 /target
+
+Cargo.lock

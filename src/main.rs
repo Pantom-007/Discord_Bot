@@ -3,11 +3,15 @@ use twilight_http::Client as Client;
 use twilight_gateway::{
     cluster::{Cluster, ShardScheme},
     Intents};
+use futures::StreamExt;
+use std::{
+    env, 
+    error::Error
+};
 
 #[tokio::main]
-fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
+async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     let token = env::var("TOKEN")?;
-    let shard = Shard::new(token, );
 
     let scheme = ShardScheme::try_from((0..1, 1))?;
     let intents = Intents::GUILD_MESSAGES | Intents:: GUILDS;

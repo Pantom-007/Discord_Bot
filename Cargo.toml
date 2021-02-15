@@ -11,3 +11,5 @@ twilight-gateway = "0.3"
 twilight-http = "0.3"
 twilight-model = "0.3"
 twilight-command-parser = "0.3"
+tokio = { version = "0.2", features = ["full"] }
+futures = "0.3.4"
