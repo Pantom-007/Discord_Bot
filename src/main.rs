@@ -1,4 +1,4 @@
-use twilight_command_parser::{CommandParserConfig, Command, Parser}};
+use twilight_command_parser::{CommandParserConfig, Command, Parser};
 use twilight_http::Client as Client;
 use twilight_gateway::{
     cluster::{Cluster, ShardScheme},
