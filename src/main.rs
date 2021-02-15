@@ -8,9 +8,12 @@ use std::{
     env, 
     error::Error
 };
+use std::convert::TryFrom;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
+    tracing_subscriber::fmt::init();
+    
     let token = env::var("TOKEN")?;
 
     let scheme = ShardScheme::try_from((0..1, 1))?;
