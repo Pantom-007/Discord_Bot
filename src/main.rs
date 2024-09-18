@@ -72,7 +72,6 @@ async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
         tokio::spawn(handle_event(event, id, &parser, client.clone()));
     }
 
-    // Result
     Ok(())
 }
 
